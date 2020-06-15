@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns="http://www.w3schools.com/" elementFormDefault="qualified" targetNamespace="http://www.w3schools.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name='oglasi'>
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name='oglas' maxOccurs='unbounded'>
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <xs:element name='kategorijaOglasa'>
+                                <xs:simpleType>
+                                    <xs:restriction base='xs:string'>
+                                        <xs:enumeration value='automobili'/>
+                                        <xs:enumeration value='stanovi'/>
+                                        <xs:enumeration value='alati'/>
+                                        <xs:enumeration value='podučavanje'/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <xs:element name='datumIsteka'>
+                                <xs:complexType>
+                                    <xs:sequence>
+
+                                        <xs:element name='dan'>
+                                            <xs:simpleType>
+                                                <xs:restriction base='xs:integer'>
+                                                    <xs:minInclusive value='1'/>
+                                                    <xs:maxInclusive value='31'/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+
+                                        <xs:element name='mesec'>
+                                            <xs:simpleType>
+                                                <xs:restriction base='xs:integer'>
+                                                    <xs:minInclusive value='1'/>
+                                                    <xs:maxInclusive value='12'/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+                                        
+                                        <xs:element name='godina'>
+                                            <xs:simpleType>
+                                                <xs:restriction base='xs:integer'>
+                                                    <xs:minInclusive value='2020'/>
+                                                </xs:restriction>
+                                            </xs:simpleType>
+                                        </xs:element>
+
+                                    </xs:sequence>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name='cena'>
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base='xs:nonNegativeInteger'>
+                                            <xs:attribute name='valuta'>
+                                                <xs:simpleType>
+                                                    <xs:restriction base='xs:string'>
+                                                        <xs:enumeration value='dinar'/>
+                                                        <xs:enumeration value='evro'/>
+                                                    </xs:restriction>
+                                                </xs:simpleType>
+                                            </xs:attribute>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+
+                            <xs:element name='tekstOglasa'>
+                                <xs:simpleType>
+                                    <xs:restriction base='xs:string'>
+                                        <xs:minLength value='10'/>
+                                        <xs:maxLength value='180'/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <xs:element name='oznakaOglasa' maxOccurs='unbounded' type='xs:string' />
+
+                            <xs:element name='epostaOglasivaca' maxOccurs='unbounded'>
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:restriction base='mailRestr'>
+                                            <xs:pattern value='([a-z0-9]{1}){0,20}@[a-z]{4,8}.com'/>
+                                        </xs:restriction>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name='mailRestr'>
+        <xs:simpleContent>
+            <xs:extension base='xs:string'>
+                <xs:attribute name='tip'>
+                    <xs:simpleType>
+                        <xs:restriction base='xs:string'>
+                            <xs:enumeration value='privatni'/>
+                            <xs:enumeration value='sluzbeni'/>
+                        </xs:restriction>
+                    </xs:simpleType>
+                </xs:attribute>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+
+</xs:schema>
