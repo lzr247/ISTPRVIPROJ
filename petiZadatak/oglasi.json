@@ -1,0 +1,60 @@
+[
+  {
+    "id": 1,
+    "kategorijaOglasa": "automobili",
+    "datumIsteka": {
+      "dan": "22",
+      "mesec": "8",
+      "godina": "2020"
+    },
+    "cena": {
+      "valuta": "evro",
+      "text": "500000"
+    },
+    "tekstOglasa": "Prodajem Fiat Punto 1.1",
+    "oznakaOglasa": [
+      "Fiat",
+      "Punto",
+      "1.1"
+    ],
+    "epostaOglasivaca": [
+      {
+        "tip": "privatni",
+        "text": "fiatpuntoprivatni@yahoo.com"
+      },
+      {
+        "tip": "sluzbeni",
+        "text": "fiatpuntosluzbeni@yahoo.com"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "kategorijaOglasa": "automobili",
+    "datumIsteka": {
+      "dan": 2,
+      "mesec": 4,
+      "godina": 2021
+    },
+    "cena": {
+      "valuta": "evro",
+      "text": 600
+    },
+    "tekstOglasa": "Fiat Punto 1.6",
+    "oznakaOglasa": [
+      "Fiat",
+      "Punto",
+      "1.1"
+    ],
+    "epostaOglasivaca": [
+      {
+        "tip": "privatni",
+        "text": "mailpriv2@yahoo.com"
+      },
+      {
+        "tip": "sluzbeni",
+        "text": "mailsluz2@yahoo.com"
+      }
+    ]
+  }
+]
