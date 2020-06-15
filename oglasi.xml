@@ -1,0 +1,34 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<!--<!DOCTYPE oglasi SYSTEM "oglasi.dtd">-->
+
+<oglasi xmlns="http://www.w3schools.com/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.w3schools.com/ oglasi.xsd">
+
+    <oglas>
+
+        <kategorijaOglasa>automobili</kategorijaOglasa>
+
+        <datumIsteka>
+            <dan>22</dan>
+            <mesec>8</mesec>
+            <godina>2020</godina>
+        </datumIsteka>
+
+        <cena valuta='evro'>500000</cena>
+
+        <tekstOglasa>Prodajem Fiat Punto 1.1</tekstOglasa>
+
+        <oznakaOglasa>Fiat</oznakaOglasa>
+
+        <oznakaOglasa>Punto</oznakaOglasa>
+
+        <oznakaOglasa>1.1</oznakaOglasa>
+
+        <epostaOglasivaca tip='privatni'>fiatpuntoprivatni@yahoo.com</epostaOglasivaca>
+
+        <epostaOglasivaca tip='sluzbeni'>fiatpuntosluzbeni@yahoo.com</epostaOglasivaca>
+
+    </oglas>
+
+</oglasi>
