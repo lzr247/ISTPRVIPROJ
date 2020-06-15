@@ -1,0 +1,16 @@
+<!ELEMENT oglasi (oglas+)>
+<!ELEMENT oglas (kategorijaOglasa, datumIsteka, cena, tekstOglasa, (oznakaOglasa)+, (epostaOglasivaca)+)>
+<!ELEMENT datumIsteka (dan, mesec, godina)>
+<!ELEMENT dan (#PCDATA)>
+<!ELEMENT mesec (#PCDATA)>
+<!ELEMENT godina (#PCDATA)>
+<!ELEMENT kategorijaOglasa (#PCDATA)>
+<!ELEMENT cena (#PCDATA)>
+<!ELEMENT tekstOglasa (#PCDATA)>
+<!ELEMENT oznakaOglasa (#PCDATA)>
+<!ELEMENT epostaOglasivaca (#PCDATA)>
+
+
+
+<!ATTLIST cena valuta CDATA 'dinar'>
+<!ATTLIST epostaOglasivaca tip (privatni|sluzbeni) #REQUIRED>
